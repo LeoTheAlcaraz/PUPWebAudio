@@ -1,0 +1,966 @@
+/*........................................................... General */
+
+@font-face {
+    /* Imports non-google font */
+    font-family: "Kalligraphia";
+    src: url("../fonts/Kalligraphia-D-OT_25803.ttf");
+}
+
+/* Basic settings for main text font */
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+/* Projects default settings for hyper-links */
+a {
+    color: white;
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+/* Same as previous except for hover settings */
+a:hover {
+    color: white;
+}
+
+/*............................................................  Containers */
+
+/* base code from whiskey drop module, altered to fit project*/
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* base code from whiskey drop module, altered to fit project*/
+.callout-container {
+    height: 100vh;
+    background-image: url('../images/pupbg1.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* padding added to top and bottom of sections*/
+.content-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+/* background image settings */
+.History-container {
+    background-image: url("../images/pupbg2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* base code from whiskey drop module, altered to fit project*/
+.gig-opaque-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Example overlay */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* background image settings for video section */
+.video-container {
+    background-image: url("../images/pupv1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* background color setting */
+.gallery-container {
+    background-image: url("../images/pupbg3.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* background color setting */
+.social-container {
+    background-color: white;
+}
+
+/*............................................................  Logo */
+
+/* alterations to the bootstrap class img-responsive*/
+.img-logo {
+    margin: 0 auto;
+    padding-top: 30px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*............................................................  Navbar Section */
+
+/* alterations made to Bootstraps navbar class for project specific navbar set up*/
+.navbar {
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+    border: 0;
+}
+
+/* removes border from expanded menu button in mobile version of navbar */
+.navbar-default .navbar-collapse {
+    border-color: black;
+    width: 100%;
+}
+
+/* When expand menu button (mobile only)is selected its background colors remains transparent */
+.navbar-default .navbar-toggle:hover .navbar-default .navbar-toggle:visited .navbar-default .navbar-toggle:active .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+/* colors the bars in the expand menu button to white */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/* when a link item is interacted with it remains white */
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+
+/* basic settings for link items */
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    font-size: 20px;
+}
+
+/* sets font type for link items in mobile nav */
+.navbar a {
+    font-family: "Kalligraphia", sans-serif;
+}
+
+/*alterations made to Bootstraps navbar-brand class for project specific navbar set up on mobile */
+.navbar-brand {
+    font-size: 25px;
+    padding-top: 18px;
+}
+
+/*Sets background color to transparent*/
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+/* Navbar Link Hover and Active Effects */
+.navbar-default .navbar-nav > li > a {
+    color: white; /* Default text color */
+    padding: 15px 20px; /* Increased padding to cover the full area */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: block; /* Make the link a block element to cover the full area */
+    height: 100%; /* Ensure the link covers the full height of the navbar */
+}
+
+/* Hover Effect */
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: #6b0707; /* Dark red color for hover */
+    color: white; /* Text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Active and Focus Effects (when clicked or focused) */
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+    background-color: #6b0707; /* Dark red color for active state */
+    color: white !important; /* Force text color to stay white */
+    text-decoration: none; /* Remove underline on active */
+}
+
+/*............................................................  Jumbotron Section */
+
+/* alterations made to bootstraps jumbotron class */
+.jumbotron {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+/* font settings for the music service links in jumbotron */
+.lead.music-service {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+/* font settings for the music service links in jumbotron upon hover */
+.lead.music-service:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* settings for the new album details in jumbotron */
+.lead.music-text {
+    font-style: italic;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    margin: 25px 0;
+}
+
+/*............................................................  Block dividers */
+
+/* block divider borrowed from whiskey drop module, sets divider dimensions relies on either black or white versions for color */
+.block-divider {
+    width: 35px;
+    height: 5px;
+    border: 0;
+}
+
+/*Sets background color */
+.block-divider--white {
+    background-color: white;
+}
+
+/*Sets background color */
+.block-divider--black {
+    background-color: black;
+}
+
+/*........................................................... Section Titles */
+
+/* colors text white */
+.page-header .white-title {
+    color: rgb(255, 255, 255); /* White text */
+}
+
+/* Change "Experience PUP in Motion" without affecting the other */
+.page-header .experience-title {
+    color: rgb(255, 0, 0) !important; /* Change to your desired color */
+}
+
+.page-header h2.experience-title {
+    color: rgb(0, 0, 0) !important;
+}
+
+/* sets font for section titles */
+.text-title {
+    font-family: "Kalligraphia", sans-serif;
+}
+
+/* basic font settings */
+.social-title {
+    color: black;
+    font-weight: 300;
+}
+
+/* ............................................................ Page Headers */
+
+/* extra styles added to bootstrap page-header class */
+.page-header {
+    margin-bottom: 0;
+    border-bottom: 0;
+    text-align: center;
+}
+
+/* removed margin-top */
+.page-header h2 {
+    margin-top: 0;
+}
+
+/* added 25 px of space at the bottom */
+.band .page-header {
+    margin-bottom: 25px;
+}
+
+/* added 25 px of space at the bottom */
+.gigs .page-header {
+    margin-bottom: 25px;
+}
+
+/* added 25 px of space at the bottom */
+.music .page-header {
+    margin-bottom: 25px;
+}
+
+/* added 25 px of space at the bottom */
+.video .page-header {
+    margin-bottom: 25px;
+}
+
+/*............................................................  Section Text */
+
+/* aligns text in center */
+.section-text p {
+    text-align: center;
+}
+
+/*............................................................ Band Section */
+
+/* removes border on the left */
+blockquote {
+    border-left: 0;
+}
+
+/* puts 25px of space at the bottom */
+.media-body {
+    padding-bottom: 25px;
+}
+
+/* sets font size */
+.media-body p {
+    font-size: 14px;
+}
+
+/*............................................................  Gigs Section */
+
+/* sets color of text to white */
+.gigs-text {
+    color: white;
+}
+
+/* sets color of text inside table to white */
+body table {
+    color: white;
+}
+
+/* styles sold out! to look like the other live links */
+.dead-link {
+    color: white;
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.label {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* top line of gigs table positioning */
+.table>tbody>tr>td {
+    vertical-align: middle;
+}
+
+/*............................................................  Buttons */
+
+/* extra styles added to bootstrap button class */
+.btn--cta {
+    font-weight: bold;
+    border-radius: 23px;
+    width: 160px;
+    background-color: #31b0d5;
+    color: white;
+}
+
+/* ........................................................ Booking Modal */
+
+/* To center vertically */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/*........................................................ Music Section */
+
+/* centers text sets width */
+p .section-text {
+    text-align: center;
+    width: 30em;
+    padding-left: 50%;
+    padding-right: 50%;
+}
+
+/*......................................................... Gallery Section */
+
+/*For uniform sizing */
+.gallery-img {
+    display: block;
+    max-width: 100%;
+    height: 400px !important;
+}
+
+/* colors text white */
+#gallery-text {
+    color: white;
+}
+
+/*............................................................ Video Section*/
+
+/* colors text white */
+#video-text {
+    color: rgb(8, 8, 8);
+}
+
+/* makes video centered and responsive */
+video {
+    height: auto !important;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*............................................................ Social Footer */
+
+/* basic font settings */
+.lead.social-text {
+    font-family: "Kalligraphia", sans-serif;
+    font-size: 35px;
+    color: white;
+    text-decoration: underline;
+}
+
+/* basic font settings, positioning and removal of style, margin and padding from list */
+.social-list {
+    font-size: 45px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+/* displays list horizontally instead of vertically */
+.social-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* colors font awesome social icons black */
+.fa {
+    color: black;
+}
+
+/* styles newsletter subscription */
+#signup.contact-form {
+    display: block;
+    font-size: 14px;
+    margin-top: 0em;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    padding-top: 25px;
+}
+
+/* styles back to top link */
+#back {
+    color: black;
+    text-decoration: underline;
+}
+
+/* sets border color */
+input .email-box {
+    border-color: black;
+}
+
+/*......................................................... MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    /*............................................................  Containers */
+    .callout-container {
+        height: 100vh;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /*............................................................  Logo */
+    .img-responsive {
+        padding-top: 90px;
+    }
+
+    /*............................................................  Navbar Section */
+    .navbar {
+        margin-bottom: 0;
+        position: absolute;
+    }
+
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav>li {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .navbar-default {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width */
+        background: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 8px 0; /* Reduced height */
+    }
+
+    .navbar-default .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        font-size: 18px; /* Slightly smaller font */
+        font-family: "Poppins", sans-serif;
+        color: rgb(0, 0, 0);
+        padding: 6px 12px; /* Less padding for a compact look */
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #fcfcfc;
+    }
+
+    /* Prevents content from hiding behind the navbar */
+    body {
+        padding-top: 50px; /* Adjusted to match shorter navbar */
+    }
+
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>li>a:active {
+        text-decoration: underline;
+    }
+
+    /*............................................................  Jumbotron Section*/
+    .lead.music-text {
+        font-style: italic;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 25px;
+        color: white;
+        margin: 25px 0;
+    }
+
+    /*............................................................  Video Section */
+    video {
+        width: 60%;
+    }
+}
+
+/* Floating Services Button */
+.services-trigger {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #6b0707;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001; /* Higher than panel */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.services-trigger:hover {
+    background: #8a0a0a; /* Slightly lighter red on hover */
+}
+
+/* Services Panel */
+.services-panel {
+    position: fixed;
+    right: -320px; /* Start off-screen to the right */
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background: white;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000; /* Lower than trigger */
+}
+
+.services-panel.active {
+    right: 0; /* Slide in from right */
+}
+
+/* Floating Services Button */
+.services-trigger {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #6b0707;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001; /* Higher than panel */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.services-trigger:hover {
+    background: #8a0a0a; /* Slightly lighter red on hover */
+}
+
+/* Services Panel */
+.services-panel {
+    position: fixed;
+    right: -320px; /* Start off-screen to the right */
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background: white;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000; /* Lower than trigger */
+}
+
+.services-panel.active {
+    right: 0; /* Slide in from right */
+}
+
+/* Panel Header */
+.panel-header {
+    padding: 20px;
+    background: #6b0707;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-panel {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-panel:hover {
+    color: #ccc;
+}
+
+/* Services List */
+.services-list {
+    padding: 20px;
+}
+
+.service-item {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    background: #f8f9fa;
+    border-radius: 4px;
+    color: #6b0707;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.service-item:hover {
+    background: #6b0707;
+    color: white;
+}
+
+/* Document Request Form */
+.document-request {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.document-request h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background: #6b0707;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #8a0a0a;
+}
+
+/* Media Player Bar */
+.media-player-bar {
+    position: fixed;
+    bottom: -60px; /* Start hidden */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background: rgba(107, 7, 7, 0.95); /* Semi-transparent red */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1002; /* Above everything */
+    transition: bottom 0.3s ease;
+}
+
+.media-player-bar.visible {
+    bottom: 20px; /* Show at the bottom */
+}
+
+.now-playing {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.song-title {
+    font-weight: bold;
+}
+
+.current-song {
+    font-style: italic;
+}
+
+.playback-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-control:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.media-player-bar {
+    border: 2px solid red; /* Temporary debug */
+}
+
+/* Services Trigger Button */
+.services-trigger {
+    z-index: 1003; /* Above media player */
+}
+
+/* Services Panel */
+.services-panel {
+    z-index: 1002; /* Below trigger, above media player */
+}
+
+/* Media Player Bar */
+.media-player-bar {
+    z-index: 1001; /* Below everything else */
+}
+
+.services-panel {
+    border: 2px solid red; /* Temporary debug */
+}
+
+/* Services Trigger Button */
+.services-trigger {
+    z-index: 1003; /* Above media player */
+}
+
+/* Services Panel */
+.services-panel {
+    z-index: 1002; /* Below trigger, above media player */
+}
+
+/* Media Player Bar */
+.media-player-bar {
+    z-index: 1001; /* Below everything else */
+}
+
+.services-panel {
+    border: 2px solid rgb(0, 0, 0); /* Temporary debug */
+}
+.media-player-bar {
+    border: 2px solid rgb(255, 255, 255); /* Temporary debug */
+}
+
+/* Lyrics Container */
+.lyrics-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Lyrics Toggle Button */
+.lyrics-toggle {
+    background-color: #6b0707;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.lyrics-toggle:hover {
+    background-color: #8a0a0a;
+}
+
+/* Lyrics Content */
+.lyrics-content {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    color: #333;
+    text-align: left;
+}
+
+.lyrics-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Seek Bar */
+.seek-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seek-bar input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.current-time,
+.duration {
+    font-size: 14px;
+    color: white;
+}
+
+/* Lyrics Container */
+.lyrics-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Lyrics Toggle Button */
+.lyrics-toggle {
+    background-color: #6b0707;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.lyrics-toggle:hover {
+    background-color: #8a0a0a;
+}
+
+/* Lyrics Content */
+.lyrics-content {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    color: #333;
+    text-align: left;
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto; /* Enable scrolling for long lyrics */
+}
+
+.lyrics-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Highlighted Lyrics */
+.lyrics-content span.highlight {
+    background-color: #6b0707; /* Dark red background */
+    color: white; /* White text */
+    padding: 2px 5px;
+    border-radius: 3px;
+}
